@@ -70,10 +70,17 @@ group by case when 总楼层 > 7 then '电梯房' else '非电梯房' end
 order by total desc
 """
 data = pd.read_sql(con=engine, sql=sql)
-plt.plot(data['tp'], data['total'], label='房源数量')
-for x, y in zip(data['tp'], data['total']):
-    plt.text(x, y, y, ha='center', va='bottom', fontsize=11)
-plt.plot(data['tp'], data['per'], label='租金(元/平米)')
+plt.pie(data['total'],
+        labels=data['tp'],
+        colors=['m','g'],
+        startangle=90,
+        shadow= True,
+        explode=(0,0.1),
+        autopct='%1.1f%%')
+plt.title('房源数量占比')
+plt.show()
+
+plt.bar(data['tp'], data['per'], label='租金(元/平米)')
 for x, y in zip(data['tp'], data['per']):
     plt.text(x, y, y, ha='center', va='bottom', fontsize=11)
 plt.legend()
