@@ -23,6 +23,11 @@ from rent
 group by 户型
 order by total desc
 
+select substr(户型, 0, 3) as 户型, count(1) as total, sum(价格)/sum(面积) as per
+from rent
+group by substr(户型, 0, 3)
+order by 1
+
 --电梯
 select case when 总楼层 > 7 then '电梯房' else '非电梯房' end as tp, count(1) as total, sum(价格)/sum(面积) as per
 from rent
@@ -45,14 +50,14 @@ select case when 总楼层 > 7 then '电梯房'
             else '非电梯房' end as tp1,
        case when 1.0 * 所在楼层/总楼层 > 0.66 then '高层'
             when 1.0 * 所在楼层/总楼层 > 0.33 then '中层'
-            else '底层' end as tp2,
+            else '低层' end as tp2,
        count(1) as total, sum(价格)/sum(面积) as per
 from rent
 group by case when 总楼层 > 7 then '电梯房'
               else '非电梯房' end,
          case when 1.0 * 所在楼层/总楼层 > 0.66 then '高层'
               when 1.0 * 所在楼层/总楼层 > 0.33 then '中层'
-              else '底层' end
+              else '低层' end
 order by 1, 2  desc
 
 -- 5.交通分析
