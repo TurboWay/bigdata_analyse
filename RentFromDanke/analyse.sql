@@ -1,7 +1,9 @@
 -- 1.整体情况（出租房数量，每平米租金）
 select count(1) as total,  -- 出租房总数量
-	   sum(价格)/sum(面积) as per -- 平均每平米租金
+	   sum(价格)/sum(面积) as per, -- 平均每平米租金
+	   avg(面积) as avg_area -- 每套房源的平均出租面积
 from rent
+
 
 -- 2.地区分析
 select 位置1, count(1) as total, count(distinct 小区) as com, sum(价格)/sum(面积) as per
