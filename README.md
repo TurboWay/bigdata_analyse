@@ -22,4 +22,3 @@
 ## refer
 
 > 1. [https://tianchi.aliyun.com/dataset/](https://tianchi.aliyun.com/dataset/)
-> 2. [http://archive.ics.uci.edu/ml/index.php](http://archive.ics.uci.edu/ml/index.php)
