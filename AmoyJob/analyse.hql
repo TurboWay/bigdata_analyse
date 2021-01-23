@@ -39,16 +39,6 @@ group by company
 order by avg_salary desc
 limit 10;
 
--- 福利词云(导出为 welfare.csv)
-select fl, count(1)
-from(
-select b.fl
-from job
-lateral view explode(split(welfare,'、'))  b AS fl
-) as a
-where fl <> '其他'
-group by fl;
-
 -- 工作时间
 select worktime_day, count(1) cn
 from job
@@ -64,6 +54,26 @@ where worktime_week <> '0'
 group by worktime_week
 order by cn desc
 limit 10;
+
+-- 工作地点(导出为 workplace.csv)
+select workplace, count(1) as cn
+from(
+select regexp_replace(b.workplace, '厦门市', '') as workplace
+from job
+lateral view explode(split(workplace, '、|，')) b AS workplace
+) as a
+where workplace rlike '湖里|海沧|思明|集美|同安|翔安'
+group by workplace;
+
+-- 福利词云(导出为 welfare.csv)
+select fl, count(1)
+from(
+select b.fl
+from job
+lateral view explode(split(welfare,'、'))  b AS fl
+) as a
+where fl <> '其他'
+group by fl;
 
 -- 工作经验
 select case when jobage in ('其它工作经验', '不限', '应届生') then jobage
