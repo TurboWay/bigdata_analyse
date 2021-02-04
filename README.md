@@ -20,8 +20,10 @@
 | [130 万条深圳通刷卡数据分析](https://github.com/TurboWay/bigdata_analyse/blob/master/SZTcard/深圳通刷卡数据分析.md)       |  离线处理  | 清洗 pandas  + 分析 impala + 可视化 dbeaver | [百度网盘](https://pan.baidu.com/s/1WslwKXKhVH1q_6u4SvuKkQ) 提取码：t561 |
 | [10 万条厦门招聘数据分析](https://github.com/TurboWay/bigdata_analyse/blob/master/AmoyJob/2021厦门招聘数据分析.md)       |  离线处理  | 清洗 pandas  + 分析 hive + 可视化 ( hue + pyecharts ) + 预测 sklearn | [百度网盘](https://pan.baidu.com/s/199_Rss8Y2nLBAbM1qBycgA) 提取码：ef1n |
 | [7000 条租房数据分析](https://github.com/TurboWay/bigdata_analyse/blob/master/RentFromDanke/租房数据分析.md)       |  离线处理  | 清洗 pandas  + 分析 sqlite + 可视化 matplotlib  | [百度网盘](https://pan.baidu.com/s/1l1x5qurJdkyUxAuhknj_Qw) 提取码：9en3 |
+| [6000 条倒闭企业数据分析](https://github.com/TurboWay/bigdata_analyse/blob/master/DeathCompany/倒闭企业数据分析.html)       |  离线处理  | 清洗 pandas  + 分析 pandas + 可视化 (jupyter notebook + pyecharts) | [百度网盘](https://pan.baidu.com/s/1W1KT2XialQK7gmyXdszfKw) 提取码：y7x4 |
 
 ## refer
 
 > 1. [https://tianchi.aliyun.com/dataset/](https://tianchi.aliyun.com/dataset/)
 > 2. [https://opendata.sz.gov.cn/data/api/toApiDetails/29200_00403601](https://opendata.sz.gov.cn/data/api/toApiDetails/29200_00403601)
+> 3. [https://www.kesci.com/home/dataset](https://www.kesci.com/home/dataset)
