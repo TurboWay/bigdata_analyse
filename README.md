@@ -24,9 +24,9 @@
 | [1000 万条淘宝用户行为数据实时分析](https://github.com/TurboWay/bigdata_analyse/blob/main/UserBehaviorFromTaobao_Stream/用户行为数据实时分析.md)       |  实时处理  | 数据源 kafka  + 实时分析 flink + 可视化（es + kibana）  | [百度网盘](https://pan.baidu.com/s/1wDVQpRV7giIlLJJgRZAInQ)  提取码：gja5  |
 | [300 万条《野蛮时代》的玩家数据分析](https://github.com/TurboWay/bigdata_analyse/blob/main/AgeOfBarbarians/野蛮时代数据分析.md)       |  离线处理  | 清洗 pandas  + 分析 mysql + 可视化 pyecharts | [百度网盘](https://pan.baidu.com/s/1Mi5lvGDF405Nk8Y2BZDzdQ) 提取码：paq4 |
 | [130 万条深圳通刷卡数据分析](https://github.com/TurboWay/bigdata_analyse/blob/main/SZTcard/深圳通刷卡数据分析.md)       |  离线处理  | 清洗 pandas  + 分析 impala + 可视化 dbeaver | [百度网盘](https://pan.baidu.com/s/1WslwKXKhVH1q_6u4SvuKkQ) 提取码：t561 |
-| [10 万条厦门招聘数据分析](https://github.com/TurboWay/bigdata_analyse/blob/main/AmoyJob/2021厦门招聘数据分析.md)       |  离线处理  | 清洗 pandas  + 分析 hive + 可视化 ( hue + pyecharts ) + 预测 sklearn | [百度网盘](https://pan.baidu.com/s/199_Rss8Y2nLBAbM1qBycgA) 提取码：ef1n |
+| [10 万条厦门招聘数据分析](https://github.com/TurboWay/bigdata_analyse/blob/main/AmoyJob/2021厦门招聘数据分析.md)       |  离线处理  | 清洗 pandas  + 分析 hive + 可视化 ( hue + pyecharts ) + 预测 sklearn | [百度网盘](https://pan.baidu.com/s/1mco8dKb5o0qPd2kqsj7bNg) 提取码：9wx0|
 | [7000 条租房数据分析](https://github.com/TurboWay/bigdata_analyse/blob/main/RentFromDanke/租房数据分析.md)       |  离线处理  | 清洗 pandas  + 分析 sqlite + 可视化 matplotlib  | [百度网盘](https://pan.baidu.com/s/1l1x5qurJdkyUxAuhknj_Qw) 提取码：9en3 |
-| [6000 条倒闭企业数据分析](https://nbviewer.jupyter.org/github/TurboWay/bigdata_analyse/blob/main/DeathCompany/倒闭企业数据分析.ipynb)       |  离线处理  | 清洗 pandas  + 分析 pandas + 可视化 (jupyter notebook + pyecharts) | [百度网盘](https://pan.baidu.com/s/1W1KT2XialQK7gmyXdszfKw) 提取码：y7x4 |
+| [6000 条倒闭企业数据分析](https://nbviewer.jupyter.org/github/TurboWay/bigdata_analyse/blob/main/DeathCompany/倒闭企业数据分析.ipynb)       |  离线处理  | 清洗 pandas  + 分析 pandas + 可视化 (jupyter notebook + pyecharts) | [百度网盘](https://pan.baidu.com/s/1I6E6i4ZadxE9IlVPe3Bqwg) 提取码：xvgm |
 
 ## refer
 
