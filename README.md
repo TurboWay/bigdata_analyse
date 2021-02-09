@@ -26,8 +26,8 @@
 | [130 万条深圳通刷卡数据分析](https://github.com/TurboWay/bigdata_analyse/blob/main/SZTcard/深圳通刷卡数据分析.md)       |  离线处理  | 清洗 pandas  + 分析 impala + 可视化 dbeaver | [百度网盘](https://pan.baidu.com/s/1WslwKXKhVH1q_6u4SvuKkQ) 提取码：t561 |
 | [10 万条厦门招聘数据分析](https://github.com/TurboWay/bigdata_analyse/blob/main/AmoyJob/2021厦门招聘数据分析.md)       |  离线处理  | 清洗 pandas  + 分析 hive + 可视化 ( hue + pyecharts ) + 预测 sklearn | [百度网盘](https://pan.baidu.com/s/1mco8dKb5o0qPd2kqsj7bNg) 提取码：9wx0|
 | [7000 条租房数据分析](https://github.com/TurboWay/bigdata_analyse/blob/main/RentFromDanke/租房数据分析.md)       |  离线处理  | 清洗 pandas  + 分析 sqlite + 可视化 matplotlib  | [百度网盘](https://pan.baidu.com/s/1l1x5qurJdkyUxAuhknj_Qw) 提取码：9en3 |
-| [6000 条倒闭企业数据分析](https://nbviewer.jupyter.org/github/TurboWay/bigdata_analyse/blob/06ab5a434ca7848af68c3e6bbd2cfadd9185096c/DeathCompany/%E5%80%92%E9%97%AD%E4%BC%81%E4%B8%9A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.ipynb)       |  离线处理  | 清洗 pandas  + 分析 pandas + 可视化 (jupyter notebook + pyecharts) | [百度网盘](https://pan.baidu.com/s/1I6E6i4ZadxE9IlVPe3Bqwg) 提取码：xvgm |
-| [COVID-19 疫情数据分析](https://nbviewer.jupyter.org/github/TurboWay/bigdata_analyse/blob/06ab5a434ca7848af68c3e6bbd2cfadd9185096c/COVID-19/%E7%96%AB%E6%83%85%E5%88%86%E6%9E%90.ipynb)       |  离线处理  | 清洗 pandas  + 分析 pandas + 可视化 (jupyter notebook + pyecharts) | [csse_covid_19_time_series](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series) |
+| [6000 条倒闭企业数据分析](https://nbviewer.jupyter.org/github/TurboWay/bigdata_analyse/blob/main/DeathCompany/倒闭企业数据分析.ipynb)       |  离线处理  | 清洗 pandas  + 分析 pandas + 可视化 (jupyter notebook + pyecharts) | [百度网盘](https://pan.baidu.com/s/1I6E6i4ZadxE9IlVPe3Bqwg) 提取码：xvgm |
+| [COVID-19 疫情数据分析](https://nbviewer.jupyter.org/github/TurboWay/bigdata_analyse/blob/main/COVID-19/新冠疫情数据分析.ipynb)       |  离线处理  | 清洗 pandas  + 分析 pandas + 可视化 (jupyter notebook + pyecharts) | [csse_covid_19_time_series](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series) |
 
 ## refer
 
