@@ -25,23 +25,23 @@ def retry(func):
 
 
 @retry
-def download(file):
+def download(url):
     try:
-        url_head = 'https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/'
+        file = url.split('/')[-1]
         with open(file, 'w', encoding='utf-8-sig') as f:
-            url = url_head + file
             f.write(requests.get(url).text)
         print(f'{file} has been updated success')
         return True
-    except:
+    except Exception as e:
+        print(e)
         return False
 
 
 if __name__ == "__main__":
-    files = [
-        'time_series_covid19_confirmed_global.csv',
-        'time_series_covid19_deaths_global.csv',
-        'time_series_covid19_recovered_global.csv'
+    urls = [
+        'https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv',
+        'https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv',
+        'https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv'
     ]
-    for file in files:
-        download(file)
+    for url in urls:
+        download(url)
