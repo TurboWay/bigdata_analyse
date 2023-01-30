@@ -37,17 +37,18 @@ data['age'] = data['age'].apply(lambda x: x.replace('岁至', '-').replace('岁'
 # 语言要求: 忽视精通程度，格式化
 data['lang'].unique()
 data['lang'].fillna('不限', inplace=True)
-data['lang'] = data['lang'].apply(lambda x: x.split('水平')[0] )
+data['lang'] = data['lang'].apply(lambda x: x.split('水平')[0])
 data['lang'].replace('其他', '不限', inplace=True)
 
 # 月薪: 格式化。根据一般经验取低值，比如 5000-6000, 取 5000
 data['salary'].unique()
 data['salary'] = data['salary'].apply(lambda x: x.replace('参考月薪： ', '') if '参考月薪： ' in str(x) else x)
-data['salary'] = data['salary'].apply(lambda x: x.split('-', 1)[0] if '-' in str(x) else x )
+data['salary'] = data['salary'].apply(lambda x: x.split('-', 1)[0] if '-' in str(x) else x)
 data['salary'].fillna('0', inplace=True)
 
 # 其它岗位说明：缺失值填无
 data.fillna('其他', inplace=True)
+
 
 # 工作年限格式化
 def jobage_clean(x):
@@ -59,11 +60,12 @@ def jobage_clean(x):
         x = re.findall('\S{1,2}年', x)[0]
         x = re.sub('厂|验|年|，', '', x)
         digit_map = {
-            '一': 1, '二': 2, '三': 3, '四': 4, '五': 5, '六': 6, '七': 7, '八': 8, '九': 9, '十':10,
-            '十一': 11, '十二': 12, '十三': 13, '十四': 14, '十五': 15, '十六': 16, '两':2
+            '一': 1, '二': 2, '三': 3, '四': 4, '五': 5, '六': 6, '七': 7, '八': 8, '九': 9, '十': 10,
+            '十一': 11, '十二': 12, '十三': 13, '十四': 14, '十五': 15, '十六': 16, '两': 2
         }
         return digit_map.get(x, x)
     return '其它工作经验'
+
 
 data['jobage'].unique()
 data['jobage'] = data['jobage'].apply(jobage_clean)
@@ -72,13 +74,14 @@ data['jobage'] = data['jobage'].apply(jobage_clean)
 data['sex'].unique()
 data['sex'].replace('无', '不限', inplace=True)
 
-# 工作类型格式化
+# 工作类型格式
 data['job_type'].unique()
 data['job_type'].replace('毕业生见习', '实习', inplace=True)
 
 # 学历格式化
 data['education'].unique()
 data['education'] = data['education'].apply(lambda x: x[:2])
+
 
 # 公司类型 格式化
 def company_type_clean(x):
@@ -92,12 +95,14 @@ def company_type_clean(x):
         return '合资'
     return x
 
+
 data['company_type'].unique()
 data['company_type'] = data['company_type'].apply(company_type_clean)
 
+
 # 行业 格式化。多个行业，取第一个并简单归类
 def industry_clean(x):
-    if len(x) > 100  or '其他' in x:
+    if len(x) > 100 or '其他' in x:
         return '其他'
     industry_map = {
         'IT互联网': '互联网|计算机|网络游戏', '房地产': '房地产', '电子技术': '电子技术', '建筑': '建筑|装潢',
@@ -109,6 +114,7 @@ def industry_clean(x):
         if re.findall(keyword, x):
             return industry
     return x.split('、')[0].replace('/', '')
+
 
 data['industry'].unique()
 data['industry'] = data['industry'].apply(industry_clean)
@@ -125,5 +131,12 @@ data['skill'] = data['require'].apply(lambda x: '、'.join(re.findall('[a-zA-Z]+
 # 查看保存的数据
 print(data.info)
 
-# 保存清洗后的数据 csv
+# 保存清洗后的数据 job_clean.csv
 data.to_csv('job_clean.csv', index=False, header=None, encoding='utf-8-sig')
+
+# 取学历、年龄段、薪资作预测，保存为 train.csv
+train_data = data[['education', 'jobage', 'salary']][data['job_type']=='全职']
+train_data['jobage'] = train_data['jobage'].apply(lambda x: x if x not in ['应届生', '不限', '其它工作经验'] else '0')
+train_data['salary'] = train_data['salary'].astype('int')
+train_data = train_data[(train_data['salary'] > 1000)]
+train_data = train_data.to_csv('train.csv', index=False, encoding='utf-8-sig')
